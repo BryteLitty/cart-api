@@ -37,8 +37,8 @@ app.post('/checkout', async (req, res) => {
     const session = await stripe.checkout.sessions.create({
         line_items: lineItems,
         mode: 'subscription',
-        success_url: "http://localhost:3000/success",
-        cancel_url: "http://localhost:3000/cancel"
+        success_url: "https://simplecart.onrender.com/success",
+        cancel_url: "https://simplecart.onrender.com/cancel"
     });
 
     res.send(JSON.stringify({

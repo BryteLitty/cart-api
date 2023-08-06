@@ -16,6 +16,10 @@ app.use(cors());
 app.use(express.json('public'));
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.json("I'm up working...")
+});
+
 app.post('/checkout', async (req, res) => {
 
     // console.log(req.body);
